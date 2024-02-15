@@ -12,6 +12,7 @@ import java.util.ArrayList;
  * @author j1
  */
 public class Comanda {
+    private int idComanda;
     private ArrayList<Producto> listaProductos;
     private Mesa mesa;
     private LocalDateTime fecha;
@@ -19,11 +20,20 @@ public class Comanda {
     
     public Comanda () {}
 
-    public Comanda(ArrayList<Producto> listaProductas, Mesa mesa, LocalDateTime fecha, String observaciones) {
+    public Comanda(int idComanda, ArrayList<Producto> listaProductas, Mesa mesa, LocalDateTime fecha, String observaciones) {
+        this.idComanda = idComanda;
         this.listaProductos = listaProductas;
         this.mesa = mesa;
         this.fecha = fecha;
         this.observaciones = observaciones;
+    }
+
+    public int getIdComanda() {
+        return idComanda;
+    }
+
+    public void setIdComanda(int idComanda) {
+        this.idComanda = idComanda;
     }
 
     public ArrayList<Producto> getListaProductos() {
